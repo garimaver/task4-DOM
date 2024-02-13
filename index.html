@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Booking Web App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Logo</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="user-info">
+  
+          Username   <i class="fas fa-sign-out-alt" style="color: rgb(229, 19, 19);"></i> 
+
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- section left -->
+      <div class="sec-left">
+        <div class="Add-section">
+          <h2>Added Items</h2>
+          <div class="service-name">
+            <p>S.No    Service Name</p>
+              <span>Price</span>
+          </div>
+         
+          <ul class="added-items">
+           
+          </ul>
+          <!-- <p>Add items to the cart from the services bar</p> -->
+          <hr />
+          <div class="total-service">
+            <p>
+              Total Amount:
+              </p>
+              <span id="total-amount">₹0</span>
+            
+          </div>
+        </div>
+        <div class="booking-section">
+          <form id="booking-form">
+            <h2>Book Now</h2>
+            <div>
+              <label for="fullname">Full Name</label>
+              <input
+                type="fullname"
+                id="fullname"
+                name="fullname"
+                placeholder="John Doe"
+                required
+              />
+            </div>
+            <div class="input-bottom">
+              <div class="form-group">
+                <label for="email">Email id</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="password"
+                  placeholder="mailid@gmail.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phoneNumber">PhoneNumber</label>
+                <input
+                  type="phoneNumber"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  placeholder="0000000000"
+                  required
+                />
+              </div>
+            </div>
+
+            <button type="submit" class="booking-btn" onclick="bookNow()">Book Now</button>
+            <div id="message">
+        
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- section right here -->
+      <div class="right-section">
+        <h2>Browse Our Services</h2>
+        <p>
+          Click on the add to cart button to add the services to your <br />
+          cart to press skip.
+        </p>
+        <hr />
+        <ul class="services">
+          <li class="service">
+            <img class="service-images" src="service1.jpg" alt="Service 1" />
+         <div class="price-sec">
+          <h2 class="service-names"></h2>
+          <p class="service-prices"></p>
+         </div>
+            <div class="buttons">
+              <button onclick="skipItem()" class="skip-btn">Skip Item <i class="fas fa-minus-circle"></i></button>
+              <button onclick="addItem('Service 1', 50)" class="add-btn">
+                Add Item <i class="fas fa-plus-circle"></i> 
+              </button>
+            </div>
+          </li>
+        </ul>
+        <hr />
+        <span> Add the items to the cart and book now</span>
+    
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
